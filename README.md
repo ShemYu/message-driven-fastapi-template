@@ -69,4 +69,23 @@ python -m consumer.worker
 
 The consumer will now listen for and process messages from the queue. You can run multiple consumer instances if needed for increased processing capacity.
 
+### Running Tests
+
+#### Unit Tests
+Run the unit tests using pytest:
+```bash
+python -m pytest tests/
+```
+
+#### Performance Tests
+Run performance tests using Locust:
+
+1. Start the Locust test:
+```bash
+locust -f performance_tests/locustfile.py
+```
+
+2. Open your browser and navigate to `http://localhost:8089` to access the Locust web interface
+
+3. Set the number of users, spawn rate, and start the test from the web interface
 
